@@ -5,7 +5,7 @@ Home: https://github.com/ideonate/jhsingle-native-proxy
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Wrap an arbitrary webapp so it can be used in place of jupyter-singleuser in a JupyterHub setting
 
@@ -116,5 +116,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@danlester](https://github.com/danlester/)
 * [@fcollonval](https://github.com/fcollonval/)
 

@@ -1,18 +1,18 @@
 {% set name = "jhsingle-native-proxy" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace('_', '-') }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 69c57349856db0887b23c476491c54d2dfc947de310cd331be3aef5dc8e6bb0f 
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace('_', '-') }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 673b42939907fd2966f2a3d50088ad0ca8c9a4f43b4fcc3d81a258abe5f99bfe
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   entry_points:
     - jhsingle-native-proxy = jhsingle_native_proxy.main:run
 
@@ -35,10 +35,12 @@ test:
     - jhsingle-native-proxy --help
 
 about:
-  home: https://github.com/ideonate/jhsingle-native-proxy 
+  home: https://github.com/ideonate/jhsingle-native-proxy
   license: Apache-2.0
   license_family: Apache
-  license_file: LICENSE
+  license_file: 
+    - LICENSE
+    - LICENSE-jupyter-server-proxy
   summary: Wrap an arbitrary webapp so it can be used in place of jupyter-singleuser in a JupyterHub setting
 
 extra:
