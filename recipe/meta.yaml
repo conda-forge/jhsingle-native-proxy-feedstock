@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6.0,<4.0.0
     - jupyterhub >=1.0.0
-    - tornado >=5.1
+    - tornado >=6.0.4
     - click >=7.0
     - aiohttp
     - simpervisor
