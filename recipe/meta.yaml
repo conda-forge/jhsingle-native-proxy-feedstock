@@ -1,5 +1,5 @@
 {% set name = "jhsingle-native-proxy" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace('_', '-') }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8babd1104254c2c8205727bff75119d53ce2431a3f05295a8a1e7aeefdb86b25
+  sha256: d7c83836d9a94a03a42ce82260da71fd25d138b006dd7790a8baf564be9b8886
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6.0,<4.0.0
     - jupyterhub >=1.0.0
-    - tornado >=5.1
+    - tornado >=6.0.4
     - click >=7.0
     - aiohttp
     - simpervisor
@@ -31,7 +31,10 @@ requirements:
 test:
   imports:
     - jhsingle_native_proxy
+  requires:
+    - pip
   commands:
+    - pip check
     - jhsingle-native-proxy --help
 
 about:
