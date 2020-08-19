@@ -31,7 +31,10 @@ requirements:
 test:
   imports:
     - jhsingle_native_proxy
+  requires:
+    - pip
   commands:
+    - pip check
     - jhsingle-native-proxy --help
 
 about:
