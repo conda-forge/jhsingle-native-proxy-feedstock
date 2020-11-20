@@ -5,11 +5,9 @@ Home: https://github.com/ideonate/jhsingle-native-proxy
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jhsingle-native-proxy-feedstock/blob/master/LICENSE.txt)
 
 Summary: Wrap an arbitrary webapp so it can be used in place of jupyter-singleuser in a JupyterHub setting
-
-
 
 Current build status
 ====================
