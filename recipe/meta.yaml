@@ -10,7 +10,7 @@ source:
   sha256: d36367f6c5140c295b250011bc868baba605ab9ae0940ca7f8bdedc8b1c09a9b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - tornado >=6.0.4
     - click >=7.0
     - aiohttp
-    - simpervisor
+    - simpervisor >=0.4
 
 test:
   imports:
