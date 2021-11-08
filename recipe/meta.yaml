@@ -1,5 +1,5 @@
 {% set name = "jhsingle-native-proxy" %}
-{% set version = "0.7.6" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace('_', '-') }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 306994e1c7664800d597214436e30205ae81566c45cdd9359c746ae8a80e000f
+  sha256: 4b29e286727576fd2c74721dba80f2c016fd2bc92eafeabbbaf5dddfd30fb32b
 
 build:
   number: 0
