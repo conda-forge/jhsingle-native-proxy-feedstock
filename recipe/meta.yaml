@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace('_', '-') }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name | replace('_', '-') }}/{{ name }}-{{ version }}.tar.gz
   sha256: eb47a905a8b5c64f9d95f0690210d782620ed5ca764cff1c45b96344810069b6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   entry_points:
@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6.0,<4.0.0
+    - python {{ python_min }}
   run:
-    - python >=3.6.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - jupyterhub >=1.0.0
     - tornado >=6.0.4
     - click >=7.0
@@ -33,6 +33,7 @@ test:
     - jhsingle_native_proxy
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - jhsingle-native-proxy --help
